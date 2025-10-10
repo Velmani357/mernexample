@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Game</title>
+</head>
+ <nav>
+        <a href="index.html">Home</a>
+       
+         <a href="about.html">about</a>
+            <a href="flex.html">flexboxpage</a>
+            <a href="example.html">flexboxpage</a>
+            <a href="rps.html">flexboxpage</a>
+    </nav>
+<body>
+
+  <h1>Rock Paper Scissors ✊✋✌️</h1>
+
+  <div class="choices">
+    <button onclick="playGame('rock')">Rock</button>
+    <button onclick="playGame('paper')">Paper</button>
+    <button onclick="playGame('scissors')">Scissors</button>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+    function playGame(userChoice) {
+      const choices = ['rock', 'paper', 'scissors'];
+      const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+      let result = '';
+
+      if (userChoice === computerChoice) {
+        result = "It's a draw! 🤝";
+      } else if (
+        (userChoice === 'rock' && computerChoice === 'scissors') ||
+        (userChoice === 'paper' && computerChoice === 'rock') ||
+        (userChoice === 'scissors' && computerChoice === 'paper')
+      ) {
+        result = `You win! 🎉 (${userChoice} beats ${computerChoice})`;
+      } else {
+        result = `You lose! 😢 (${computerChoice} beats ${userChoice})`;
+      }
+
+      document.getElementById('result').innerHTML =
+        // `<p>You chose <b>${userChoice}</b></p>
+        //  <p>Computer chose <b>${computerChoice}</b></p>
+         `<p>${result}</p>`;
+    }
+  </script>
+
+</body>
+</html>
