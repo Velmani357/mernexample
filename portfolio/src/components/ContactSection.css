@@ -1,0 +1,24 @@
+.contact-section {
+  background: linear-gradient(135deg, #e0d7ff, #d2c4ff);
+  text-align: center;
+  padding: 80px 20px;
+  color: #3a1e9a;
+}
+
+.contact-section h2 {
+  margin-bottom: 30px;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #5b3ee5;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-shadow: 0 0 10px rgba(160, 120, 255, 0.6);
+}
