@@ -1,21 +1,25 @@
 import React from "react";
-import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
-import ProjectsSection from "./components/ProjectsSection";
-import SkillsSection from "./components/SkillsSection";
-import ContactSection from "./components/ContactSection";
-import "./App.css";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Skills from "./pages/Skills";
 
-const App = () => {
+import Contact from "./pages/Contact";
+import "./index.css";
+
+function App() {
   return (
-    <div className="app-container">
-      <Header />
-      <HeroSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <ContactSection />
+    <div style={{ backgroundColor: "#121212", color: "#fff", fontFamily: "Arial, sans-serif" }}>
+      <Navbar />
+      <Home />
+      <About />
+      <Projects />
+      <Skills />
+     
+      <Contact />
     </div>
   );
-};
+}
 
 export default App;

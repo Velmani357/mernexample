@@ -1,12 +1,201 @@
-/* index.css */
-* {
+/* General styles */
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  scroll-behavior: smooth;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #1e1e2f; /* default dark background */
-  color: #f5f5f5;
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #4f46e5;
+}
+
+/* Section styling */
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 50px;
+  transition: all 0.5s ease;
+}
+
+/* 🔥 Smooth Fade & Slide Transition for all sections */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.9s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#home {
+  background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+  flex-direction: row;
+}
+
+#home img {
+  width: 300px;
+  border-radius: 10px;
+  margin-left: 50px;
+  border: 3px solid #4f46e5;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#home img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(79, 70, 229, 0.5);
+}
+
+#home .intro {
+  max-width: 600px;
+}
+
+#about, #projects, #skills, #certificates, #contact {
+  background: #1a1a1a;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #4f46e5;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+/* Buttons */
+button {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #3730a3;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.5);
+}
+
+/* Skills */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill {
+  background: #2c2c2c;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: #4f46e5;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Certificates */
+.certificates-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.certificate {
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 300px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.certificate:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(79, 70, 229, 0.4);
+}
+
+/* Contact */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+.contact-form button {
+  align-self: center;
 }
