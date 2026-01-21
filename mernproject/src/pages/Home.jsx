@@ -4,10 +4,11 @@ function Home() {
   return (
     <div>
       <h1>Welcome Home</h1>
-      <p>click usestate.</p>
+      <p>This is the home page.</p>
       <ul>
         <li>
           <Link to="/State">usestate</Link>
+          <Link to="/Effects">useeffect</Link>
         </li>
       </ul>
     </div>
