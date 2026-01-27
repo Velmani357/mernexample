@@ -1,0 +1,10 @@
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    justify-content: space-evenly;
+    background-color:violet;
+    color: black;
+    height: 65px;
+    font-size: 35px;
+    
+}
