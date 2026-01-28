@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Profile from "./components/Profile"
-import Count from "./hooks/State"
+import State from "./hooks/State"
 import Parent from "./components/Parent"
 import Form from "./hooks/Form"
 import Home from "./pages/Home"
@@ -11,7 +11,9 @@ import Contact from "./pages/Contact"
 import Navbar from "./components/Navbar"
 import Products from "./pages/Products"
 import ProductDetails from "./pages/ProductDetails"
-
+import Reducer from "./hooks/Reducer"
+import {createContext } from "react"
+export const userContext=createContext()
 const App = () => {
   return (
     <>
@@ -24,6 +26,11 @@ const App = () => {
         <Route path="/About" element={<About />} />
         <Route path="/Products" element={<Products/>}/>
         <Route path="/Products/:id" element={<ProductDetails/>}/>
+          <Route path="/state" element={<State/>}/>
+            <Route path="/form" element={<Form/>}/>
+              <Route path="/Profile" element={<Profile/>}/>
+              <Route path="/reducer" element ={<Reducer/>}/>
+
       </Routes>
 
 

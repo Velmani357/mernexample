@@ -1,12 +1,16 @@
 import React from 'react'
- import {useState} from 'react'  
+ import {useEffect,useState} from 'react'  
 const Form = () => {
      const [form,setForm]=useState({
         name:"",
         email:"",
         age:"",
         department:""
+        
     })
+     useEffect(()=>{
+            console.log("from useEffect")
+          })
     const handleChange=(e)=>{
         const {name,value}=e.target
         setForm((prev)=>({
